@@ -11,13 +11,24 @@
             $conexao = new Conexao();
             $this->conn = $conexao->getConexao();
         }
-
+        function pesquisarUsuario($usuario){
+           $sql = "SELECT nome FROM usuario WHERE nome = '".$usuario->getNome()."'"; 
+           
+           $resul = $this->conn->query($sql);
+           if($resul->num_rows > 0){
+                while($linha = $resul->fetch_assoc()){
+                    echo "nome:".$linha["nome"]."<br>";                    
+                }
+                }else{
+                    echo "Nenhum usuario encontrado!! <br>";
+                }
+        }
     
-        function listaUsuario(){
+        function listarUsuario(){
             $sql = "SELECT idUsuario, nome FROM usuario";
 
             $resul = $this->conn->query($sql);
-            if ($resul->num_rows >0) {
+            if ($resul->num_rows > 0) {
                 while ($linha = $resul->fetch_assoc()) {
                     echo "id: ".$linha["idUsuario"]."<br>";
                     echo "nome: ".$linha["nome"]."<br>";
@@ -27,12 +38,32 @@
             }
         }
 
-        function inserirUsuario(){
-            $sql = "INSERT INTO usuario (nome,senha) VALUES ('toddynho','teste123')";
+        function inserirUsuario($usuario){
+            $sql = "INSERT INTO usuario (nome,senha) VALUES ('".$usuario->getNome()."','".md5($usuario->getSenha())."')";
             if ($this->conn->query($sql) == true) {
-                echo "Usuario inserido com sucesso!";
+                echo "Usuario inserido com sucesso! <br>";
             }else{
-                echo "Não possivel inserir usuario!";
+                echo "Não possivel inserir usuario! <br>";
+            }
+        }
+
+        function atualizarUsuario($usuario){
+            $sql = "UPDATE usuario SET nome = '".$usuario->getNome()."' where nome='".$usuario->getNome()."'";
+
+            if ($this->conn->query($sql) == true) {
+                echo "Usuario atualizado com sucesso! <br>";
+            }else{
+                echo "Não possivel atualizar usuario! <br>";
+            }
+        }
+
+        function deletarUsuario($usuario){
+            $sql = "DELETE FROM usuario  where nome='".$usuario->getNome()."'";
+
+            if ($this->conn->query($sql) == true) {
+                echo "Usuario deletado com sucesso! <br>";
+            }else{
+                echo "Não possivel deletar usuario! <br>";
             }
         }
 

@@ -4,6 +4,7 @@
         $idAnimal;
         $nomeA;
         $descricao;
+        $status;
     
         public function setIdAnimal($id){
             $this->idAnimal = $id;
@@ -22,6 +23,12 @@
         }
         public function getDescricao(){
             return $this->descricao;
+        }
+        public function setStatus($status){
+            $this->status = $status;
+        }
+        public function getStatus(){
+            return $this->status;
         }
 
 
