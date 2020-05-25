@@ -12,7 +12,7 @@ include 'verifica.php';
     </head>
 <body>
     <h2>Você está logado!</h2>
-    <p>Seja bem vindo(a) <?php echo $_SESSION['fNome'] ?></p>
+    <p>Seja bem vindo(a) <?php echo $_SESSION['fNome']."<br>".$_SESSION['id']?></p>
     <a href="logout.php">Sair</a>
 </body>
 

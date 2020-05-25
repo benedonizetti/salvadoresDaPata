@@ -31,16 +31,6 @@
 
         
 
-        public function inserirUsuario($usuario){
-            $sql = "INSERT INTO usuario (nome,senha) values ('".$usuario->getNome()."','".$usuario->getSenha()."')";
-            
-            if ($conn->query($sql) === TRUE) {
-                echo "Cadastro realizado com sucesso!";
-            } else {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        }
-
     }
 
 ?>

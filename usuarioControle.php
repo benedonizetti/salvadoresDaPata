@@ -15,10 +15,12 @@ $usuario = new Usuario($nome,$senha);
 
 $usuarioDao = new UsuarioDao();
 //$usuarioDao->inserirUsuario($usuario);
-$usuarioDao->pesquisarUsuario($usuario);
+//$usuarioDao->pesquisarUsuario($usuario);
 //$usuarioDao->listarUsuario();
 //$usuarioDao->atualizarUsuario($usuario);
 //$usuarioDao->deletarUsuario($usuario);
+$usuarioDao->logar($usuario);
+
 ?>
 <!DOCTYPE html>
 <html lang="pr-br">

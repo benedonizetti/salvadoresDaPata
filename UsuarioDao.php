@@ -63,7 +63,23 @@
             if ($this->conn->query($sql) == true) {
                 echo "Usuario deletado com sucesso! <br>";
             }else{
-                echo "Não possivel deletar usuario! <br>";
+                echo "Não foi possivel deletar usuario! <br>";
+            }
+        }
+
+        function logar($usuario){
+            $sql = "SELECT * FROM usuario WHERE nome ='".$usuario->getNome()."' and senha = '".md5($usuario->getSenha())."'";
+           
+            $resul = $this->conn->query($sql);
+            if ($resul->num_rows > 0) {
+                session_start();
+                $_SESSION['fNome'] = $usuario->getNome();
+                $_SESSION['id'] = $usuario->getId();
+                header('location: segunda.php');
+                exit();
+            }else{
+                //header('location: index.html');
+                echo "nao foi";
             }
         }
 
