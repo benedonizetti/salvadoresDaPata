@@ -3932,6 +3932,9 @@ input[type=button].btn-block {
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
   border-color: #e9ecef #e9ecef #dee2e6;
 }
+.nav-item{
+text-shadow: 2px 2px black;
+}
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
   background-color: transparent;
@@ -10140,7 +10143,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  background-image: url("../assets/img/banner-home.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10445,13 +10448,11 @@ header.masthead .masthead-heading {
 }
 
 section#contact {
-  background-color: #212529;
-  background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 section#contact .section-heading {
-  color: #fff;
+  color: rgb(14, 13, 13);
 }
 section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;

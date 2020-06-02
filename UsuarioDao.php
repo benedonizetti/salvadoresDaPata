@@ -41,7 +41,9 @@
         function inserirUsuario($usuario){
             $sql = "INSERT INTO usuario (nome,senha) VALUES ('".$usuario->getNome()."','".md5($usuario->getSenha())."')";
             if ($this->conn->query($sql) == true) {
-                echo "Usuario inserido com sucesso! <br>";
+                echo "<script>alert('Cadastro realizado com sucesso!');
+	            window.location.replace('login.php');
+                </script>";
             }else{
                 echo "Não possivel inserir usuario! <br>";
             }

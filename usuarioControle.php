@@ -14,12 +14,12 @@ if(isset($_POST['fSenha'])){
 $usuario = new Usuario($nome,$senha);
 
 $usuarioDao = new UsuarioDao();
-//$usuarioDao->inserirUsuario($usuario);
+$usuarioDao->inserirUsuario($usuario);
 //$usuarioDao->pesquisarUsuario($usuario);
 //$usuarioDao->listarUsuario();
 //$usuarioDao->atualizarUsuario($usuario);
 //$usuarioDao->deletarUsuario($usuario);
-$usuarioDao->logar($usuario);
+//$usuarioDao->logar($usuario);
 
 ?>
 <!DOCTYPE html>
@@ -30,6 +30,6 @@ $usuarioDao->logar($usuario);
     <title>Inserir</title>
 </head>
 <body>
-    <p>Clique <a href="logar.html">aqui</a> para logar!</p>
+    <p>Clique <a href="login.php">aqui</a> para logar!</p>
 </body>
 </html>

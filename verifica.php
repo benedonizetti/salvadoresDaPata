@@ -2,7 +2,7 @@
 session_start();
 
 if(!$_SESSION['fNome']){
-    header('location: logar.html');
+    header('location: login.php');
     exit();
 }
 ?>
