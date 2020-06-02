@@ -11,6 +11,8 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
+                    <h1 class="section-geading text-uppercase">Cadastro!</h1>
+                    <br>
                     <h3 class="section-heading text-uppercase">Para continuar preencha as informações abaixo!</h3>
                     
                 </div>
@@ -22,13 +24,25 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input class="form-control" id="email" name="fSenha" type="password" placeholder="Senha *" required="required" data-validation-required-message="Por favor sua senha!" />
+                                <input class="form-control" id="email" name="fCpf" type="text" placeholder="CPF *" required="required"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" name="fEndereco" type="text" placeholder="Endereço: Rua, AV *" required="required"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" name="fnumero" type="text" placeholder="Número *" required="required"/>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" name="fsenha" type="password" placeholder="Senha *" required="required"/>
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
                     </div>
                     <div class="text-center">
-                        <input class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit" value="Entrar"/>
+                        <input class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit" value="Cadastrar!"/>
                     </div>
                 </form>
             </div>

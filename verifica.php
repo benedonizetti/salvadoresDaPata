@@ -2,7 +2,7 @@
 session_start();
 
 if(!$_SESSION['fNome']){
-    header('location: login.php');
+    header('location: formLogin.php');
     exit();
 }
 ?>

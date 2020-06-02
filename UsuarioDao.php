@@ -42,10 +42,12 @@
             $sql = "INSERT INTO usuario (nome,senha) VALUES ('".$usuario->getNome()."','".md5($usuario->getSenha())."')";
             if ($this->conn->query($sql) == true) {
                 echo "<script>alert('Cadastro realizado com sucesso!');
-	            window.location.replace('login.php');
+	            window.location.replace('formLogin.php');
                 </script>";
             }else{
-                echo "Não possivel inserir usuario! <br>";
+                echo "<script>alert('Não foi possivel inserir usuário!');
+	            window.location.replace('formCadastrarUsuario.php');
+                </script>";
             }
         }
 

@@ -11,11 +11,12 @@
         </div>
         </header>
 
-         <!-- Portfolio Grid-->
-         <section class="page-section bg-light" id="portfolio">
+        <!-- Portfolio Grid-->
+        <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">ultimos animais cadastrados!</h2>
+                    <h2 class="section-heading text-uppercase">Animais disponiveis para adoção!</h2>
+                    <h3 class="section-subheading text-muted">ultimos 6 animais cadastrados.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">

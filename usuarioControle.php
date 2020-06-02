@@ -19,7 +19,7 @@ $usuarioDao->inserirUsuario($usuario);
 //$usuarioDao->listarUsuario();
 //$usuarioDao->atualizarUsuario($usuario);
 //$usuarioDao->deletarUsuario($usuario);
-//$usuarioDao->logar($usuario);
+//
 
 ?>
 <!DOCTYPE html>
