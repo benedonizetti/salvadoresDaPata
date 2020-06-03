@@ -1,5 +1,5 @@
 <?php
-    include_once 'cabecalho.html';
+    include_once 'cabecalho.php';
 ?>
         <!-- Masthead-->
         <header class="masthead">
@@ -70,8 +70,7 @@
                                 <img class="img-fluid" src="assets/img/portfolio/cachorro3.jpg" alt=""
                             /></a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Colé</div>
-                                
+                                <div class="portfolio-caption-heading">Colé</div>      
                             </div>
                         </div>
                     </div>

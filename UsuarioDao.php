@@ -79,11 +79,13 @@
                 session_start();
                 $_SESSION['fNome'] = $usuario->getNome();
                 $_SESSION['id'] = $usuario->getId();
-                header('location: segunda.php');
+                header('location: index.php');
                 exit();
             }else{
-                //header('location: index.html');
-                echo "nao foi";
+                //header('location: index.php');
+                echo "<script>alert('Usuário ou senha invalida!');
+	            window.location.replace('formLogin.php');
+                </script>";
             }
         }
 

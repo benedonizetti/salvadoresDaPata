@@ -26,7 +26,28 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="adotar.php">Adotar</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="buscar.php">Buscar</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="sobre.php">Quem somos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="formLogin.php">Login</a></li>
+                        <?php
+                        session_start();
+                        if(isset($_SESSION['fNome'])){
+                            $nome = $_SESSION['fNome'];
+                            //echo "<div class='bemvindo'>Bem Vindo! <strong>$usuario</strong> | Hoje é: ".date('d/m/Y')."</div>";
+                           // echo "<li class='nav-item'><a class='nav-link js-scroll-trigger' href='index.php'>Bem vindo(a) $nome!</a></li>";
+                        
+                            echo "<li class='nav-item submenu dropdown'>";
+							echo "<a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false' >Bem vindo(a) $nome!</a>";
+                            echo "<ul class='dropdown-menu'>";
+                            echo "<li class='nav-item'>";
+                            echo "<a class='nav-link' href='logout.php'>Sair</a>"; 
+                            echo "</li>";
+                            echo  "</ul>";          
+                            echo  "</li>";      
+                        
+                        
+                        }
+                        else{
+                            echo "<li class='nav-item'><a class='nav-link js-scroll-trigger' href='formLogin.php'>Login</a></li>";
+                        }?>
+                        
                     </ul>
                 </div>
             </div>

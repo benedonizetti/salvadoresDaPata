@@ -1,5 +1,5 @@
 <?php
-include_once 'cabecalho.html';
+include_once 'cabecalho.php';
 include_once "Usuario.php";
 include_once "UsuarioDao.php";
 ?>
